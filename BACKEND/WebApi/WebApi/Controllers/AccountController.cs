@@ -21,10 +21,14 @@ namespace WebApi.Controllers
         private readonly IAccountHandler _accountHandler;
         public AccountController(IOptions<JwtSettings> jwtSettings, IAccountHandler accountHandler)
         {
-            _jwtSettings = jwtSettings.Value;
             _accountHandler = accountHandler;
+            _jwtSettings = jwtSettings.Value;
         }
-
+        /// <summary>
+        /// Đăng nhập và trả về token
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpPost]
         [Route("login")]
@@ -33,10 +37,11 @@ namespace WebApi.Controllers
             try
             {
                 var user = await _accountHandler.AuthenticateUser(login);
-                if(user.Code == Code.Success && user is ResponseObject<UserModel> userData)
+
+                if (user.Code == Code.Success && user is ResponseObject<UserModel> userData)
                 {
                     var tokenString = GenerateJsonWebToken(userData.Data);
-                    Log.Information($"Login Successful: {JsonConvert.SerializeObject(login)}");
+                    Log.Information($"Login successful: {JsonConvert.SerializeObject(login)}");
                     var result = new LoginResponse()
                     {
                         TokenString = tokenString,
@@ -47,12 +52,17 @@ namespace WebApi.Controllers
                 Log.Error($"Login failed: {JsonConvert.SerializeObject(login)}");
                 return Ok(new ResponseObject<LoginResponse>(null, user.Message, Code.Unauthorized));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Log.Error($"Login failed: {JsonConvert.SerializeObject(ex)}");
                 return Ok(new ResponseError(Code.ServerError, "Login failed"));
             }
         }
+        /// <summary>
+        /// Tạo mới tài khoản
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpPost]
         [Route("register")]
@@ -81,6 +91,12 @@ namespace WebApi.Controllers
         {
             return Ok(await _accountHandler.GetById(id));
         }
+        /// <summary>
+        /// Thay đổi mật khẩu người dùng
+        /// </summary> 
+        /// <param name="model">Thông tin người dùng cần cập nhật mật khẩu</param>
+        /// <returns>Id người dùng đã cập nhật thành công</returns> 
+        /// <response code="200">Thành công</response>
         [Authorize, HttpPut, Route("update-password")]
         public async Task<IActionResult> UpdatePassword([FromBody] UserUpdatePasswordModel model)
         {
@@ -88,6 +104,13 @@ namespace WebApi.Controllers
 
             return Ok(result);
         }
+
+        /// <summary>
+        /// Lấy lại mật khẩu người dùng
+        /// </summary> 
+        /// <param name="email">Thông tin người dùng cần cập nhật mật khẩu</param>
+        /// <returns>Id người dùng đã cập nhật thành công</returns> 
+        /// <response code="200">Thành công</response>
         [AllowAnonymous, HttpGet, Route("forgot-password")]
         public async Task<Response> ForgotPassword([FromQuery] string email)
         {
@@ -95,20 +118,21 @@ namespace WebApi.Controllers
 
             return result;
         }
-        public string GenerateJsonWebToken(UserModel user)
+        private string GenerateJsonWebToken(UserModel user)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            var claims = new[]
-            {
+            var claims = new[] {
                 new Claim("UserId", user.Id.ToString()),
                 new Claim("Username", user.Username),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
-            var token = new JwtSecurityToken(_jwtSettings.Issuer, _jwtSettings.Audience,
+            var token = new JwtSecurityToken(_jwtSettings.Issuer,
+                _jwtSettings.Audience,
                 claims,
                 expires: DateTime.UtcNow.AddHours(24),
                 signingCredentials: credentials);
+
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
