@@ -6504,7 +6504,6 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
-      "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
       "Domain >= 1.0.0",
       "Infrastructure.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Hosting.Abstractions >= 2.2.0",
@@ -6548,9 +6547,6 @@
           "projectReferences": {
             "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Application\\Application.csproj": {
               "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Application\\Application.csproj"
-            },
-            "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj": {
-              "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj"
             },
             "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Domain\\Domain.csproj": {
               "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Domain\\Domain.csproj"
@@ -6631,16 +6627,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
