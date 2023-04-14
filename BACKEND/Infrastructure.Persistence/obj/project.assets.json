@@ -2416,7 +2416,6 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "Common": "1.0.0",
           "Domain": "1.0.0",
           "FluentValidation": "11.5.1",
           "FluentValidation.DependencyInjectionExtensions": "11.5.1",
@@ -6487,8 +6486,8 @@
     },
     "Common/1.0.0": {
       "type": "project",
-      "path": "../Common/Common/Common.csproj",
-      "msbuildProject": "../Common/Common/Common.csproj"
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
@@ -6504,7 +6503,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
-      "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
+      "Common >= 1.0.0",
       "Domain >= 1.0.0",
       "Infrastructure.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Hosting.Abstractions >= 2.2.0",
@@ -6631,16 +6630,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

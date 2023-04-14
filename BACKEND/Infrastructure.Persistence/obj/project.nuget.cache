@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "75c+phEs/3R31ne23qwaoNFE2lBjvVCfhU/SW4AcuE1xrxkbEruhP6ydPp1RMqVe0RQbe7tk3cXOYobv5oTelA==",
-  "success": false,
+  "dgSpecHash": "+IRJO3j3wQ1KTCZiWnw+fWOB6tOcWrgVKNMhgahASupfSmi2mbB8MrQMBCUMrqJvH4xLRBZLYcecgGm5SYufcg==",
+  "success": true,
   "projectFilePath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -147,15 +147,5 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

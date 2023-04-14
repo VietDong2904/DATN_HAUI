@@ -28,9 +28,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\Common.csproj": {
-                "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\Common.csproj"
-              },
               "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Domain\\Domain.csproj": {
                 "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Domain\\Domain.csproj"
               }
@@ -120,14 +117,14 @@
         }
       }
     },
-    "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\Common.csproj": {
+    "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\Common.csproj",
+        "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\obj\\",
+        "outputPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -503,9 +500,6 @@
             "projectReferences": {
               "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Application\\Application.csproj": {
                 "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Application\\Application.csproj"
-              },
-              "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\Common.csproj": {
-                "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common\\Common.csproj"
               },
               "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj": {
                 "projectPath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj"

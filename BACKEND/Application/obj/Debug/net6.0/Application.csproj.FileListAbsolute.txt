@@ -1,9 +1,7 @@
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\bin\Debug\net6.0\Application.deps.json
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\bin\Debug\net6.0\Application.dll
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\bin\Debug\net6.0\Application.pdb
-D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\bin\Debug\net6.0\Common.dll
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\bin\Debug\net6.0\Domain.dll
-D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\bin\Debug\net6.0\Common.pdb
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\bin\Debug\net6.0\Domain.pdb
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig

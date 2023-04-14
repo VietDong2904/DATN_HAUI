@@ -351,3 +351,4 @@ D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\WebApi\WebApi\obj\Debug\net6.0\refint\WebAp
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\WebApi\WebApi\obj\Debug\net6.0\WebApi.pdb
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\WebApi\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\WebApi\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+D:\LEARNSPACE\DATN\DATN_HAUI\BACKEND\WebApi\WebApi\bin\Debug\net6.0\ModuleDefine.json
