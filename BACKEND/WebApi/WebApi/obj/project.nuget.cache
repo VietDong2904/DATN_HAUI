@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "RSq1Jpa+iPL1vC4r/JCmQAA/e1NZ7pWMF6p5XrD2pA8N53RgrP247k8flTXjtH3MMtK3WpT9cndoBGg93GU9mA==",
-  "success": true,
+  "dgSpecHash": "FmRSorf9bN/MD1lXsNY2adh6u7iaJRQQHkztyRVnPtcFt1lFIpEBW1kcbfI2NHhFD9gtTCGcTdSr2suf0nAe0w==",
+  "success": false,
   "projectFilePath": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\WebApi\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -274,5 +274,15 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\LEARNSPACE\\DATN\\DATN_HAUI\\BACKEND\\Common\\Common.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
