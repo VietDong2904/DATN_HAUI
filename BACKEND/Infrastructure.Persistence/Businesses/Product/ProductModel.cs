@@ -29,6 +29,7 @@ namespace Infrastructure.Persistence.Businesses.Product
         public List<string> Attachments { get; set; }
         public List<ProductMeta> ProductMetas { get; set; }
         public string Description { get; set; }
+        public int Quantity { get; set; }
     }
 
     public class ProductModel : ProductBaseModel

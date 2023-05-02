@@ -112,6 +112,7 @@ namespace Infrastructure.Persistence.Businesses.Product
                 }
                 if (model.ProductColors != null && model.ProductColors.Count > 0)
                 {
+                    var quantity = 0;
                     foreach (var item in model.ProductColors)
                     {
                         var categoryModel = new ProductSize();
@@ -122,8 +123,12 @@ namespace Infrastructure.Persistence.Businesses.Product
                         categoryModel.ProductId = entity.Id;
                         categoryModel.Price = item.Price;
                         categoryModel.Discount = item.Discount;
+                        categoryModel.Quantity = item.Quantity;
+                        quantity += categoryModel.Quantity;
                         await _dataContext.ProductColors.AddAsync(categoryModel);
                     }
+                    entity.Quantity = quantity;
+                    _dataContext.Products.Update(entity);
                 }
                 if (model.ProductMetas != null && model.ProductMetas.Count > 0)
                 {
@@ -214,6 +219,7 @@ namespace Infrastructure.Persistence.Businesses.Product
                 }
                 if (model.ProductColors != null && model.ProductColors.Count > 0)
                 {
+                    var quantity = 0;
                     foreach (var item in model.ProductColors)
                     {
                         var categoryModel = new ProductSize();
@@ -224,8 +230,12 @@ namespace Infrastructure.Persistence.Businesses.Product
                         categoryModel.ProductId = entity.Id;
                         categoryModel.Discount = item.Discount;
                         categoryModel.Price = item.Price;
+                        categoryModel.Quantity = item.Quantity;
+                        quantity += categoryModel.Quantity;
                         await _dataContext.ProductColors.AddAsync(categoryModel);
                     }
+                    entity.Quantity = quantity;
+                    _dataContext.Products.Update(entity);
                 }
                 if (model.ProductMetas != null && model.ProductMetas.Count > 0)
                 {
@@ -359,7 +369,8 @@ namespace Infrastructure.Persistence.Businesses.Product
                                 VisitCount = c.VisitCount,
                                 LoaiBaoHanh = c.LoaiBaoHanh,
                                 SupplierId = c.SupplierId,
-                                Description = c.Description
+                                Description = c.Description,
+                                Quantity = c.Quantity
                             });
                 //Filter
                 var listFilter = data.Where(x => x.Code != null).ToList();
@@ -408,7 +419,8 @@ namespace Infrastructure.Persistence.Businesses.Product
                             SizeId = a.SizeId,
                             ProductId = a.ProductId,
                             Price = a.Price,
-                            Discount = a.Discount
+                            Discount = a.Discount,
+                            Quantity = a.Quantity
                         }).ToList();
                     item.ProductMetas =
                         _dataContext.ProductMetas.Where(x => x.ProductId == item.Id).ToList();
@@ -511,7 +523,8 @@ namespace Infrastructure.Persistence.Businesses.Product
                                 VisitCount = c.VisitCount,
                                 LoaiBaoHanh = c.LoaiBaoHanh,
                                 SupplierId = c.SupplierId,
-                                Description = c.Description
+                                Description = c.Description,
+                                Quantity = c.Quantity
                             });
                 //Filter
                 var listFilter = data.Where(x => x.Code != null).ToList();
@@ -536,7 +549,8 @@ namespace Infrastructure.Persistence.Businesses.Product
                                               SizeId = a.SizeId,
                                               ProductId = a.ProductId,
                                               Price = a.Price,
-                                              Discount = a.Discount
+                                              Discount = a.Discount,
+                                              Quantity = a.Quantity
                                           }).ToList();
                     item.ProductMetas =
                         _dataContext.ProductMetas.Where(x => x.ProductId == item.Id).ToList();
@@ -612,7 +626,8 @@ namespace Infrastructure.Persistence.Businesses.Product
                                 LoaiBaoHanh = c.LoaiBaoHanh,
                                 SupplierId = c.SupplierId,
                                 SupplierName = sp.Name,
-                                Description = c.Description
+                                Description = c.Description,
+                                Quantity = c.Quantity
                             }).FirstOrDefault();
                 if (data != null)
                 {
@@ -635,7 +650,8 @@ namespace Infrastructure.Persistence.Businesses.Product
                                               SizeId = a.SizeId,
                                               ProductId = a.ProductId,
                                               Price = a.Price,
-                                              Discount = a.Discount
+                                              Discount = a.Discount,
+                                              Quantity = a.Quantity
                                           }).ToList();
                     data.ProductMetas =
                         _dataContext.ProductMetas.Where(x => x.ProductId == data.Id).ToList();

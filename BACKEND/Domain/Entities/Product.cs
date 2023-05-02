@@ -15,5 +15,6 @@ namespace Domain.Entities
         public int ThoiGianBaoHanh { get; set; }
         public Guid SupplierId { get; set; }
         public string Description { get; set; }
+        public int Quantity { get; set; }
     }
 }
